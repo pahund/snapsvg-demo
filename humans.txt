@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Patrick Hund -- frontend engineer mobile.de -- @wiekatz
+
+# THANKS
+
+    Dmitry Baranovskiy
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Snap.svg, Normalize.css, jQuery, Modernizr
