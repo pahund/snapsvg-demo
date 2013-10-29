@@ -21,17 +21,14 @@
         <!-- Add your site or application content here -->
         <h1>Snap.svg Demo <a href="index.html">1</a> | <a href="demo2.html">2</a> | 3</h1>
         <p>Hover over the phone to make it ring:</p>
-        <p><svg id="demo" xmlns="http://www.w3.org/2000/svg" version="1.1" height="200"></svg></p>
+        <p><svg id="demo" xmlns="http://www.w3.org/2000/svg" version="1.1" height="80"></svg></p>
         <pre>
          Snap.load('img/mobail-icon.svg', function (button) {
             snap.append(button);
-    
             var phone = Snap.select('#icon');
             var overlay = Snap.select('#overlay');
             var handler;
-    
             overlay.hover(function () {
-                console.log('rein');
                 handler = window.setInterval(function () {
                     phone.animate({
                         transform: 't2r0'
@@ -42,7 +39,6 @@
                     });
                 }, 60);
             }, function () {
-                console.log('raus');
                 window.clearInterval(handler);
             });
         });
