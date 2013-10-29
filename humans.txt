@@ -13,4 +13,4 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Snap.svg, Normalize.css, jQuery, Modernizr
+    Snap.svg, Normalize.css, Modernizr

@@ -19,32 +19,40 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>Snap.svg Demo <a href="index.html">1</a> | 2 | <a href="demo3.html">3</a></h1>
-        <p>Do that funky thing: <button id="rotate">Rotate!</button> <button id="dali">Dalífy!</button></p>
+        <h1>Snap.svg Demo <a href="index.html">1</a> | <a href="demo2.html">2</a> | 3</h1>
+        <p>Hover over the phone to make it ring:</p>
         <p><svg id="demo" xmlns="http://www.w3.org/2000/svg" version="1.1" height="200"></svg></p>
         <pre>
-    var snap = Snap('#demo');
-   
-    Snap.load('img/mobile-logo.svg', function (logo) {
-        snap.append(logo);
-        $('#rotate').on('click', function () {
-            Snap.select('#letter_x5F_o').animate({
-                transform: 'r360t360'
-            }, 1200);
+         Snap.load('img/mobail-icon.svg', function (button) {
+            snap.append(button);
+    
+            var phone = Snap.select('#icon');
+            var overlay = Snap.select('#overlay');
+            var handler;
+    
+            overlay.hover(function () {
+                console.log('rein');
+                handler = window.setInterval(function () {
+                    phone.animate({
+                        transform: 't2r0'
+                    }, 20, null, function () {
+                        phone.animate({
+                            transform: 't-2r0'
+                        }, 20);
+                    });
+                }, 60);
+            }, function () {
+                console.log('raus');
+                window.clearInterval(handler);
+            });
         });
-        $('#dali').on('click', function () {
-            Snap.select('#letter_x5F_o').animate({
-                d: 'M224.286,81.714c0-15.472,8.054-19.062,17.731-19.062c7.969,0,21.697-2.071,21.697,16.776c0,18.849,16,64.571-21.697,36.393c-7.751-5.794-10.534-11.114-10.534-26.583L224.286,81.714z M206.571,101.143c-13.714,30.286,36.544,31.645,58.857,39.429c24.571,8.571,12-29.546,12-55.429c0-26.305-23.801-46.706-47.429-46.285c-22.489,0-18.159,24.501-18.159,50.381L206.571,101.143z'
-            }, 1200);
-        });
-    });
         </pre>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/vendor/snap.svg.js"></script>
-        <script src="js/demo2.js"></script>
+        <script src="js/demo3.js"></script>
         <!--script src="js/vendor/snap.svg-min.js"></script-->
 
     </body>
