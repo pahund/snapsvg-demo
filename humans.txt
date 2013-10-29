@@ -4,6 +4,7 @@
 # TEAM
 
     Patrick Hund -- frontend engineer mobile.de -- @wiekatz
+    Martina Freundorfer -- frontend engineer mobile.de -- @heartbeaz
 
 # THANKS
 
