@@ -9,7 +9,7 @@ $('document').ready(function () {
         var handler;
 
         overlay.hover(function () {
-            console.log('rein');
+            console.log('in');
             handler = window.setInterval(function () {
                 phone.animate({
                     transform: 't2r0'
@@ -20,7 +20,7 @@ $('document').ready(function () {
                 });
             }, 60);
         }, function () {
-            console.log('raus');
+            console.log('out');
             window.clearInterval(handler);
         });
     });
