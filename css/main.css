@@ -105,6 +105,17 @@ body {
     margin: 10px;
 }
 
+body.iframe {
+    background-color: #f0f8ff;
+}
+
+#reload {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+
 
 
 

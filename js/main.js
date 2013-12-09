@@ -1,25 +1,5 @@
-var svg = Snap('#svg');
-
-var circle = svg.circle(100,100,100);
-
-circle.attr({
-    fill: "orange",
-    stroke: "black",
-    strokeWidth: "5"
+$(document).ready(function () {
+    $('#reload').on('click', function () {
+        location.reload();
+    });
 });
-
-circle.hover(function () {
-this.attr({
-    fill: "blue"
-});
-    
-},
-function () {this.attr({
-    fill: "orange"
-});
-    
-}
-
-);
-
-circle.drag();
