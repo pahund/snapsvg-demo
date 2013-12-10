@@ -1,6 +1,5 @@
 $('document').ready(function () {
 
-    console.log('this sucks');
     $('#letter-submit').on('click', function () {
         var text = $('#letter-text').val();
         $('#letter-form').hide();
