@@ -6,7 +6,9 @@ $('document').ready(function () {
         stroke: '#000000',
         strokeWidth: 5
     });
-    $('button').on('click', function () {
+    var $button = $('button');
+    $button.removeAttr('disabled');
+    $button.on('click', function () {
         $(this).attr('disabled', 'disabled');
         bigCircle.animate({
             cx: window.innerWidth / 2,
