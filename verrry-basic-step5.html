@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <svg id="demo" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"></svg>
+
+        <script src="js/vendor/snap.svg.js"></script>
+
+        <script>
+            var snap = Snap('#demo');
+            var circle = snap.circle(100, 100, 80);
+            circle.attr({
+                fill: 'silver',
+                stroke: 'black',
+                strokeWidth: 5
+            });
+            circle.hover(function () {
+                this.animate({
+                    fill: 'hotpink'
+                }, 300);
+            }, function () {
+                this.animate({
+                    fill: 'silver'
+                }, 300);
+            });
+            circle.click(function () {
+                this.animate({
+                    r: 0,
+                    x: 200,
+                    y: 200
+                }, 300);
+            });
+        </script>
+
+    </body>
+</html>
