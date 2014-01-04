@@ -3,21 +3,21 @@ $('document').ready(function () {
     $('#letter-submit').on('click', function () {
         var text = $('#letter-text').val();
         $('#letter-form').hide();
-        var snap = Snap('#demo');
+        var viewport = Snap('#demo');
         Snap.load('img/send-letter.svg', function (sendLetter) {
             var letterGroup = sendLetter.select('#letter');
             var y = 50, x = 35, lineh = 20;
             $.each(wrapText(text), function (k, line) {
-                letterGroup.append(snap.text(x, y, line));
+                letterGroup.append(viewport.text(x, y, line));
                 y += lineh;
             });
-            snap.append(sendLetter);
+            viewport.append(sendLetter);
             letterGroup.animate({
                 transform: 't0,318'
             }, 1000, null, function () {
-                snap.select('#back').attr({ opacity: 0 });
-                snap.select('#closed_flap').attr({ opacity: 1 });
-                snap.select('#all').animate({
+                viewport.select('#back').attr({ opacity: 0 });
+                viewport.select('#closed_flap').attr({ opacity: 1 });
+                viewport.select('#all').animate({
                     transform: 't2000,0'
                 }, 1000);
             });

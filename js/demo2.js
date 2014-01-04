@@ -1,8 +1,8 @@
 $('document').ready(function () {
-    var snap = Snap('#demo');
+    var viewport = Snap('#demo');
    
     Snap.load('img/mobile-logo.svg', function (logo) {
-        snap.append(logo);
+        viewport.append(logo);
         var $rotate = $('#rotate'), $dali = $('#dali');
         $rotate.removeAttr('disabled');
         $dali.removeAttr('disabled');

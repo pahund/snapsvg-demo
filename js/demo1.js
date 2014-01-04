@@ -1,6 +1,6 @@
 $('document').ready(function () {
-    var snap = Snap('#demo');
-    var bigCircle = snap.circle(20, 100, 10);
+    var viewport = Snap('#demo');
+    var bigCircle = viewport.circle(20, 100, 10);
     bigCircle.attr({
         fill: '#000000',
         stroke: '#000000',
